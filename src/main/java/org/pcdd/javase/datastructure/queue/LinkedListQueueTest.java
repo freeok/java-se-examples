@@ -3,7 +3,7 @@ package org.pcdd.javase.datastructure.queue;
 /**
  * @author pcdd
  */
-public class MainTest {
+public class LinkedListQueueTest {
     public static void main(String[] args) {
         LinkedListQueue<Integer> queue = new LinkedListQueue<>(3);
         System.out.println("linkedListQueue.isEmpty() = " + queue.isEmpty());

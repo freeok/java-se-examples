@@ -10,16 +10,6 @@ import java.util.Iterator;
  */
 public class LinkedListQueue<E> implements Queue<E> {
 
-    private static class Node<E> {
-        E value;
-        Node<E> next;
-
-        Node(E value, Node<E> next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
-
     private Node<E> head = new Node<>(null, null);
     private Node<E> tail = head;
     private int size;
@@ -35,12 +25,12 @@ public class LinkedListQueue<E> implements Queue<E> {
     }
 
     @Override
-    public boolean offer(E e) {
-        if (size == capacity) {
+    public boolean offer(E value) {
+        if (isFull()) {
             System.out.println("队列已满！");
             return false;
         }
-        Node<E> added = new Node<>(e, head);
+        Node<E> added = new Node<>(value, head);
         tail.next = added;
         tail = added;
         size++;
@@ -81,6 +71,11 @@ public class LinkedListQueue<E> implements Queue<E> {
     }
 
     @Override
+    public boolean isFull() {
+        return size == capacity;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return new Iterator<>() {
             Node<E> p = head.next;
@@ -97,6 +92,16 @@ public class LinkedListQueue<E> implements Queue<E> {
                 return value;
             }
         };
+    }
+
+    private static class Node<E> {
+        E value;
+        Node<E> next;
+
+        Node(E value, Node<E> next) {
+            this.value = value;
+            this.next = next;
+        }
     }
 
 }

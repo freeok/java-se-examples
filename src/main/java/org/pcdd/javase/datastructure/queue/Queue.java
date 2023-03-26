@@ -8,7 +8,7 @@ public interface Queue<E> extends Iterable<E> {
     /**
      * 队尾插入元素
      */
-    boolean offer(E e);
+    boolean offer(E value);
 
     /**
      * 队头弹出元素，并返回
@@ -26,5 +26,7 @@ public interface Queue<E> extends Iterable<E> {
     int size();
 
     boolean isEmpty();
+
+    boolean isFull();
 
 }
