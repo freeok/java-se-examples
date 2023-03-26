@@ -1,4 +1,4 @@
-package org.pcdd.javase.thread.线程interrupt;
+package org.pcdd.javase.thread.interrupt;
 
 /**
  * @author pcdd

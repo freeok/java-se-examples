@@ -1,4 +1,4 @@
-package org.pcdd.javase.thread.主线程等待子线程多种方法;
+package org.pcdd.javase.thread.synchronize_solution;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,6 +7,8 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.LockSupport;
 
 /**
+ * 主线程等待子线程的多种方法（实现线程同步的多种方法）
+ *
  * @author pcdd
  */
 @Slf4j
@@ -16,6 +18,9 @@ public class Main {
         method11();
     }
 
+    /**
+     * Thread sleep()
+     */
     private static void method01() throws Exception {
         long timeout1 = 1000;
         long timeout2 = timeout1 + 500;
@@ -31,6 +36,9 @@ public class Main {
         log.info("主线程执行！\ndo something...");
     }
 
+    /**
+     * Thread join()
+     */
     private static void method02() throws Exception {
         CopyOnWriteArrayList<Thread> list = new CopyOnWriteArrayList<>();
 
@@ -56,6 +64,9 @@ public class Main {
         log.info("主线程执行！\ndo something...");
     }
 
+    /**
+     * synchronized 等待唤醒机制
+     */
     private static void method03() throws Exception {
         Object lock = new Object();
         // 启动子线程
@@ -80,6 +91,9 @@ public class Main {
         log.info("主线程执行！\ndo something...");
     }
 
+    /**
+     * ExecutorService isTerminated() + while 轮询判断
+     */
     private static void method04() throws Exception {
         int n = 3;
         String[] tasks = {"发送短信消息完毕", "发送微信消息完毕", "发送邮箱消息完毕"};
@@ -112,6 +126,9 @@ public class Main {
         log.info("所有消息都发送完毕了，执行主线程任务。\n耗时ms：" + (System.currentTimeMillis() - start));
     }
 
+    /**
+     * ExecutorService awaitTermination()
+     */
     private static void method05() throws Exception {
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
@@ -133,6 +150,9 @@ public class Main {
         log.info("主线程执行！\ndo something...");
     }
 
+    /**
+     * Future
+     */
     private static void method06() throws Exception {
         ExecutorService executorService = Executors.newFixedThreadPool(1);
 
@@ -152,6 +172,9 @@ public class Main {
         log.info("主线程执行！");
     }
 
+    /**
+     * CountDownLatch（计数器锁）
+     */
     private static void method07() throws Exception {
         int n = 3;
         String[] tasks = {"发短信完毕", "发微信完毕", "发QQ完毕"};
@@ -179,6 +202,9 @@ public class Main {
         executorService.shutdown();
     }
 
+    /**
+     * CyclicBarrier（循环屏障）
+     */
     private static void method08() throws Exception {
         CyclicBarrier cyclicBarrier = new CyclicBarrier(6);
 
@@ -207,6 +233,9 @@ public class Main {
         log.info("主线程执行！\ndo something...");
     }
 
+    /**
+     * BlockingQueue
+     */
     private static void method09() throws Exception {
         BlockingQueue<String> queue = new ArrayBlockingQueue<>(1);
 
@@ -223,6 +252,9 @@ public class Main {
         log.info("主线程执行！\ndo something...");
     }
 
+    /**
+     * CompletableFuture（本质还是Future的get方法）
+     */
     private static void method10() throws Exception {
         CompletableFuture<Void> cf1 = CompletableFuture.runAsync(() -> {
             try {
@@ -257,6 +289,9 @@ public class Main {
         log.info("主线程执行！");
     }
 
+    /**
+     * LockSupport
+     */
     private static void method11() throws Exception {
         Thread mainThread = Thread.currentThread();
 
