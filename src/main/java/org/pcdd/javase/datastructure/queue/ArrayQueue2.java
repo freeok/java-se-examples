@@ -3,11 +3,10 @@ package org.pcdd.javase.datastructure.queue;
 import java.util.Iterator;
 
 /**
- * ArrayQueue1 改进版
- * 用size辅助判断空满
+ * ArrayQueue1 改进版，用size辅助判断空满
+ * 问题：当head或tail为Integer.MAX_VALUE+1时，求余计算索引会超出int范围
  *
  * @author pcdd
- * 2023/03/27 18:02
  */
 public class ArrayQueue2<E> implements Queue<E> {
     private final E[] array;

@@ -3,20 +3,21 @@ package org.pcdd.javase.datastructure.queue;
 import java.util.Iterator;
 
 /**
- * 数据结构：队列
- * 环形数组实现 方法1
+ * 数据结构：队列（环形数组实现）
  * 缺点：tail指针指向的位置不能存储元素
  *
  * @author pcdd
- * date 2023/03/27 00:02
  */
 public class ArrayQueue1<E> implements Queue<E> {
 
     private final E[] array;
+    // 队首元素的索引
     private int head;
+    // 队尾元素的后一位索引
     private int tail;
 
     public ArrayQueue1(int capacity) {
+        // +1表示预留一位
         array = (E[]) new Object[capacity + 1];
     }
 

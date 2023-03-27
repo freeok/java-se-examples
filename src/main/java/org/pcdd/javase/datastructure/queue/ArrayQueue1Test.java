@@ -2,7 +2,6 @@ package org.pcdd.javase.datastructure.queue;
 
 /**
  * @author pcdd
- * date 2023/03/27 00:24
  */
 public class ArrayQueue1Test {
     public static void main(String[] args) {
