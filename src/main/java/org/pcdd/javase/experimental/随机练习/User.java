@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.随机练习;
+package org.pcdd.javase.experimental.随机练习;
 
 public class User {
     private String id;

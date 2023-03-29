@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.纯色图片生成;
+package org.pcdd.javase.experimental.纯色图片生成;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.mail;
+package org.pcdd.javase.experimental.mail;
 
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailException;

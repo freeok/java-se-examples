@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.根据年龄排序;
+package org.pcdd.javase.experimental.根据年龄排序;
 
 import java.util.ArrayList;
 import java.util.Comparator;

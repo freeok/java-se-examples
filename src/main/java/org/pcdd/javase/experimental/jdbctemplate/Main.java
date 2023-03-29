@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.jdbctemplate;
+package org.pcdd.javase.experimental.jdbctemplate;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

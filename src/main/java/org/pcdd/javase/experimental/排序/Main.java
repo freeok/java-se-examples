@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.排序;
+package org.pcdd.javase.experimental.排序;
 
 import java.util.Random;
 

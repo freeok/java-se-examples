@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.hashmap;
+package org.pcdd.javase.experimental.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;

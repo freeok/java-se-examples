@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.arraylist和linkedlist插入速度对比;
+package org.pcdd.javase.experimental.arraylist和linkedlist插入速度对比;
 
 /**
  * 仿照ArrayList

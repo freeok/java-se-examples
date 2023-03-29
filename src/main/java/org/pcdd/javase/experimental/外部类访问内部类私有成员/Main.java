@@ -1,4 +1,4 @@
-package org.pcdd.javase.lab.外部类访问内部类私有成员;
+package org.pcdd.javase.experimental.外部类访问内部类私有成员;
 
 import java.io.*;
 
