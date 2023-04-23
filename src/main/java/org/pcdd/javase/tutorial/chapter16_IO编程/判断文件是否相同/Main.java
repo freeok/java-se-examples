@@ -9,11 +9,10 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) {
-        boolean flag = fileContentEquals(
-                new File("C:\\Users\\pcdd\\Desktop\\f1.txt"),
-                new File("C:\\Users\\pcdd\\Desktop\\f2.txt")
-        );
-        System.out.println(flag);
+        System.out.println(fileContentEquals(
+                new File(""),
+                new File("")
+        ));
     }
 
     private static boolean fileContentEquals(File f1, File f2) {
