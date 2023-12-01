@@ -55,6 +55,6 @@ public class Main {
         System.out.println(fun3.compareTo("Main", "a"));
         // 引用构造方法
         IFunction4<Student> fun4 = Student::new;
-        System.out.println(fun4.create("dpc", 20));
+        System.out.println(fun4.create("pcdd", 20));
     }
 }
