@@ -3,9 +3,10 @@ package org.pcdd.javase;
 import java.util.Scanner;
 
 /**
- * http://acm.zzuli.edu.cn/problem.php?id=1258
+ * http://acm.zzuli.edu.cn/showsource.php?id=8676146
  */
 public class Main1258 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -36,5 +37,6 @@ public class Main1258 {
             System.out.println();
         }
     }
+
 }
 

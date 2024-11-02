@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * http://acm.zzuli.edu.cn/submitpage.php?id=1266&sid=8569336
+ * http://acm.zzuli.edu.cn/showsource.php?id=8569336
  * 时间超限，不能暴力，要用滑动窗口
  */
-public class Main1266 {
+public class Main1266F {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

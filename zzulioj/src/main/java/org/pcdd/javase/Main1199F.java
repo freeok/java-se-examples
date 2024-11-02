@@ -9,7 +9,7 @@ import java.util.Scanner;
  * http://acm.zzuli.edu.cn/showsource.php?id=8521672
  * 答案错误
  */
-public class Main1199 {
+public class Main1199F {
 
     static int total;
     static final Scanner sc = new Scanner(System.in);

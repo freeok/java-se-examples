@@ -6,7 +6,7 @@ import java.util.Scanner;
  * http://acm.zzuli.edu.cn/showsource.php?id=8556349
  * GPT 答案正确
  */
-public class Main1199GPT {
+public class Main1199T {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

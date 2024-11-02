@@ -9,7 +9,7 @@ import java.util.TreeSet;
  * http://acm.zzuli.edu.cn/showsource.php?id=8556367
  * 正确
  */
-public class Main1242GPT {
+public class Main1242 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
