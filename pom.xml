@@ -12,6 +12,7 @@
         <module>tutorial</module>
         <module>experimental</module>
         <module>zzulioj</module>
+        <module>leetcode</module>
     </modules>
 
     <properties>
