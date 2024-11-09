@@ -1,5 +1,6 @@
 package org.pcdd.javase.jdk21;
 
+import cn.hutool.core.lang.Console;
 import lombok.SneakyThrows;
 
 import java.util.concurrent.CountDownLatch;
@@ -47,7 +48,7 @@ public class VirtualThreadVSPlatformThread2 {
         }
 
         countDownLatch.await();
-        System.out.println(STR. "总耗时：\{ System.currentTimeMillis() - start } ms" );
+        Console.log("总耗时：{} ms", System.currentTimeMillis() - start);
         executor.shutdown();
         executor.close();
     }

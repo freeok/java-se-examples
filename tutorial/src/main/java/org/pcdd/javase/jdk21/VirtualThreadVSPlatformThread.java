@@ -1,5 +1,6 @@
 package org.pcdd.javase.jdk21;
 
+import cn.hutool.core.lang.Console;
 import lombok.SneakyThrows;
 
 import java.util.ArrayList;
@@ -63,7 +64,7 @@ public class VirtualThreadVSPlatformThread {
         }
 
         long end = System.currentTimeMillis();
-        System.out.println(STR."总共耗时: \{end - start} ms，成功数量：\{successCount}");
+        Console.log("总共耗时: {} ms，成功数量：{}", end - start, successCount);
         executor.shutdown();
         executor.close();
     }

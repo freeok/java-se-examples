@@ -2,6 +2,7 @@ package org.pcdd.javase.rule34vault;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
@@ -28,7 +29,7 @@ public class Rule34vault {
     public static final int timeout = 60_000;
 
     @SneakyThrows
-    void main() {
+    public static void main(String[] args) {
         Set<String> urls = getBookmarks();
         System.out.println("云书签数量 " + urls.size());
         // 去重，本地已存在的不再下载
@@ -69,7 +70,7 @@ public class Rule34vault {
         }
 
         System.out.println("正在下载 " + src);
-        download(src, STR."\{destPath}\{FileUtil.getName(src)}");
+        download(src, StrUtil.format("{}{}", destPath, FileUtil.getName(src)));
     }
 
     /**
@@ -104,14 +105,15 @@ public class Rule34vault {
      * 调用获取书签接口
      */
     public static String reqBookmarks(int skip, int take) {
-        String bookmarkUrl = STR."https://rule34vault.com/api/v2/post/search/bookmarked/\{USER_ID}";
+        String bookmarkUrl = StrUtil.format("https://rule34vault.com/api/v2/post/search/bookmarked/{}", USER_ID);
         // 经测试，一次最多返回 100 条
-        String body = STR."""
+        String body = StrUtil.format("""
                 {
-                    "Skip": \{skip},
-                    "take": \{take},
+                    "Skip": {},
+                    "Take": {},
                     "CountTotal": true
-                }""";
+                }
+                """, skip, take);
         HttpResponse resp = HttpUtil.createPost(bookmarkUrl)
                 .contentType("application/json")
                 .body(body)
