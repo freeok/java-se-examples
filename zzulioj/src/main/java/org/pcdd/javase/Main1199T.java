@@ -9,32 +9,26 @@ import java.util.Scanner;
 public class Main1199T {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int T = Integer.parseInt(scanner.nextLine());
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
 
-        for (int t = 0; t < T; t++) {
+        for (int i = 0; i < n; i++) {
             StringBuilder correctOutput = new StringBuilder();
             StringBuilder userOutput = new StringBuilder();
 
             // 读取正确输出
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                if (line.equals("START")) {
-                    continue;
-                } else if (line.equals("END")) {
-                    break;
-                }
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                if ("START".equals(line)) continue;
+                else if ("END".equals(line)) break;
                 correctOutput.append(line).append("\n");
             }
 
             // 读取用户输出
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                if (line.equals("START")) {
-                    continue;
-                } else if (line.equals("END")) {
-                    break;
-                }
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                if ("START".equals(line)) continue;
+                else if ("END".equals(line)) break;
                 userOutput.append(line).append("\n");
             }
 
@@ -44,7 +38,7 @@ public class Main1199T {
 
             if (correctStr.equals(userStr)) {
                 System.out.println("Accepted");
-            } else {
+            }else {
                 // 去除空白字符后比较
                 String normalizedCorrect = correctStr.replaceAll("\\s+", "");
                 String normalizedUser = userStr.replaceAll("\\s+", "");
